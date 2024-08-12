@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Formulario apunte inicial</title>
+	</head>
+	<body>
+        <div style="display: flex">
+            <button id="lightThemeBtn" class="sendBtn btn_1" >claro</button>
+            <button id="contrastThemeBtn" class="sendBtn btn_1" >contrastado</button>
+        </div>
+		<div class="formOK hidden" id="formOK">
+			<h2 class="formOKText">FORMULARIO ENVIADO CORRECTAMENTE</h2>
+			<button class="btn_1" id="buttonFormOK">OK</button>
+		</div>
+		<main class="formularioMainContainer">
+			<form class="formulario" id="formulario">
+				<div class="formulario__campo_container">
+				
+					<input
+						type="text"
+						name="nombre"
+						id="nombre"
+                        placeholder="Nombre"
+						class="formulario__campo_input"
+					/>
+					<div
+						id="errores_nombre_container"
+						class="formulario__campo_container__erroresContainer"
+					></div>
+				</div>
+
+				<div class="formulario__campo_container">
+
+					<input
+						type="text"
+						name="apellido"
+						id="apellido"
+						class="formulario__campo_input"
+                        placeholder="Apellido"
+					/>
+					<div
+						id="errores_apellido_container"
+						class="formulario__campo_container__erroresContainer"
+					></div>
+				</div>
+
+				<div class="formulario__campo_container">
+					
+					<input
+						type="email"
+						name="email"
+						id="email"
+                        required
+                        placeholder="Email"
+						class="formulario__campo_input"
+					/>
+					<div
+						id="errores_email_container"
+						class="formulario__campo_container__erroresContainer"
+					></div>
+				</div>
+                <p class="labelDivContainer__div__separador">Fecha de nacimiento</p>
+				<div class="formulario__campo_container__fNac">
+		
+					<div class="formulario__campo_container__diaMesAnioContainer">
+						<div class="labelDivContainer">
+					
+							<div class="labelDivContainer__div">
+								<input
+									class="labelDivContainer__div__input"
+									type="number"
+									name="diaNac"
+									id="diaNac"
+                                    placeholder="Día"
+								/>
+								<span class="labelDivContainer__div__separador">/</span>
+							</div>
+						</div>
+
+						<div class="labelDivContainer">
+						
+							<div class="labelDivContainer__div">
+								<input
+									class="labelDivContainer__div__input"
+									type="number"
+									name="mesNac"
+									id="mesNac"
+                                    placeholder="Mes"
+								/>
+								<span class="labelDivContainer__div__separador">/</span>
+							</div>
+						</div>
+
+						<div class="labelDivContainer">
+							
+							<input
+								class="labelDivContainer__div__input"
+								type="number"
+								name="anioNac"
+								id="anioNac"
+                                placeholder="Año"
+							/>
+						</div>
+					</div>
+					<div
+						class="formulario__campo_container__erroresContainer"
+						id="errores_fechaNac_container"
+					></div>
+				</div>
+
+				<div class="formulario__campo_container__fNac">
+				
+					<select
+						id="paises_select"
+						name="pais_residencia"
+						class="formulario__campo_input select_input"
+					>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Chile</option>
+                            <option>Colombia</option>
+                            <option>Uruguay</option>
+                            <option>Paraguay</option>
+                            <option>Venezuela</option>
+                            <option>Perú</option>
+					</select>
+				</div>
+                <button class="sendBtn btn_1" type="submit">Enviar</button>
+                <p class="labelDivContainer__div__separador">Cambiar tema</p>
+			</form>
+		</main>
+        
+
+		<script type="module" src="index.js"></script>
+	</body>
+</html>
